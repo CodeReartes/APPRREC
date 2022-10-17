@@ -1,0 +1,75 @@
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+            <img src="/img/egg.png" class="icono-inicial" width="40"/>
+
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li class="lista-navegacion"><a href="/" class="nav-link px-2 text-white">Inicio</a></li>
+                <li class="lista-navegacion"><a href="#" target="_blank" rel="noopener noreferrer" class="nav-link px-2 text-white">a</a></li>
+                <li class="lista-navegacion nav-item dropdown">
+                    <div class="desplegable">
+                        <a href="#" class="nav-link px-2 text-white nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">¿Quienes somos?</a>
+                        <ul class="fuente-menu-desplegable links" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="lista-navegacion nav-item dropdown">
+                    <div class="desplegable">
+                        <a href="#" class="nav-link px-2 text-white nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">a</a>
+                        <ul class="fuente-menu-desplegable links" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#" >a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#">a</a></li>
+                            <li><a class="dropdown-item nav-link px-2 text-white" href="#" target="_blank" rel="noopener noreferrer">a</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+<!--
+            <div class="text-end">
+                <a class="btn btn-outline-light fw-bolder" th:if="${session.usuariosession == null}" th:href="@{/login}">Ingresar</a>
+                <a class="btn btn-outline-light fw-bolder" th:if="${session.usuariosession == null}" th:href="@{/registrar}">Registrarse</a>
+            </div>
+
+            <div class="m-0" th:if="${session.usuariosession != null}">
+                <a class="btn btn-outline-light fw-bolder" sec:authorize="hasRole('ADMIN')" th:href="@{/actividades/publicar}"
+                   >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg> Publicar
+                </a>
+            </div>
+
+            <div class="dropdown desplegable" th:if="${session.usuariosession != null}">
+                <a class="nav-link px-2 text-white nav-link dropdown-toggle" th:text=" 'Hola '+${session.usuariosession.nombre} " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                <ul class="fuente-menu-desplegable links" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item nav-link px-2 text-white" th:href="@{/logout}">Cerrar sesion</a></li>
+                </ul>
+            </div>
+-->
+
+            <div class="m-0">
+                <a class="btn btn-outline-light fw-bolder" th:href="@{/posteos/publicar}"
+                   >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg> Publicar
+                </a>
+            </div> 
+
+        </div>
+    </div>
+</header>

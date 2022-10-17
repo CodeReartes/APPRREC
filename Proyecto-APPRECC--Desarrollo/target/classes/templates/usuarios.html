@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de los usuarios</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">APPRECC</a>
+    <!-- Navbar links -->
+    <div class="collase navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link"
+                                    th:href="@{/usuarios/register}">Registrar</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row">
+        <h1>Lista de Usuarios</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <a th:href="@{/usuarios/register}" class="btn btn-primary btn-sm mb3">Agregar estudiante</a>
+        </div>
+    </div>
+    <br>
+
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario.nombre}">Nombre</td>
+            <td th:text="${usuario.apellido}">Apellido</td>
+            <td th:text="${usuario.email}">Email</td>
+            <td th:text="${usuario.password}">Password</td>
+            <td>
+                <a th:href="@{/usuarios/editar/{id}(id=${usuario.id})}" class="btn btn-info">Editar</a>
+                <a th:href="@{/usuarios/{id}(id=${usuario.id})}" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

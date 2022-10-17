@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuarios</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">APPRECC</a>
+    <!-- Navbar links -->
+    <div class="collase navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link"
+                                    th:href="@{/usuarios/login}">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class="text-center">Edicion de usuarios</h1>
+            <div class="card-body">
+                <form th:action="@{/usuarios/{id}(id=${usuario.id})}" th:object="${usuario}" method="POST">
+                    <div class="form-group">
+                        <label>Nombre :</label>
+                        <input type="text" name="nombre" th:field="*{nombre}" class="form-control"
+                               placeholder="Digite su nombre :" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Apellido :</label>
+                        <input type="text" name="apellido" th:field="*{apellido}" class="form-control"
+                               placeholder="Digite su apellido :" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Email :</label>
+                        <input type="email" name="email" th:field="*{email}" class="form-control"
+                               placeholder="Digite su email :" required>
+                    </div>
+                    <br>
+                    <div class="box-footer">
+                        <button class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
